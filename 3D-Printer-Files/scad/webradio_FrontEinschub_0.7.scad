@@ -1,6 +1,6 @@
 $fn=90;
 
-//FrontEinschub();
+FrontEinschub();
 
 //Platine();
 
@@ -24,24 +24,24 @@ module Platine(){
 module Platinenpfosten(){ //Platine 54x44 Loch 47x37
       
     minkowski(){
-    translate([0,1,37/2])cube([54,10-2,3-1],center=true);
+    translate([0,1,37/2])cube([46,10-2,3-1],center=true);
         sphere(1);
     }
         minkowski(){
-    translate([0,1,-37/2])cube([54,10-2,3-1],center=true);
+    translate([0,1,-37/2])cube([46,10-2,3-1],center=true);
         sphere(1);
     }
 difference(){
 union(){
- translate([54/2,5.3,37/2]) rotate([90,0,0])cylinder(r=3,h=20.3);
- translate([-54/2,5.3,37/2]) rotate([90,0,0])cylinder(r=3,h=20.3);
- translate([54/2,5.3,-37/2]) rotate([90,0,0])cylinder(r=3,h=20.3);
- translate([-54/2,5.3,-37/2]) rotate([90,0,0])cylinder(r=3,h=20.3);
+ translate([47/2,5.3,37/2]) rotate([90,0,0])cylinder(r=3,h=21.3);
+ translate([-47/2,5.3,37/2]) rotate([90,0,0])cylinder(r=3,h=21.3);
+ translate([47/2,5.3,-37/2]) rotate([90,0,0])cylinder(r=3,h=21.3);
+ translate([-47/2,5.3,-37/2]) rotate([90,0,0])cylinder(r=3,h=21.3);
 }
-translate([54/2,5.3-4,37/2]) rotate([90,0,0])cylinder(r=1,h=20.3);
- translate([-54/2,5.3-4,37/2]) rotate([90,0,0])cylinder(r=1,h=20.3);
- translate([54/2,5.3-4,-37/2]) rotate([90,0,0])cylinder(r=1,h=20.3);
- translate([-54/2,5.3-4,-37/2]) rotate([90,0,0])cylinder(r=1,h=20.3);
+translate([47/2,5.3-4,37/2]) rotate([90,0,0])cylinder(r=1,h=20.3);
+ translate([-47/2,5.3-4,37/2]) rotate([90,0,0])cylinder(r=1,h=20.3);
+ translate([47/2,5.3-4,-37/2]) rotate([90,0,0])cylinder(r=1,h=20.3);
+ translate([-47/2,5.3-4,-37/2]) rotate([90,0,0])cylinder(r=1,h=20.3);
 }
 }
     
@@ -110,7 +110,7 @@ translate([18,4.7,3]) rotate([90,0,0])    cylinder(d=4,h=4.5);
     
     
 //translate([0,0,0])ESP(); //handgelötete Platine
-translate([6,0,0])    Platinenpfosten(); //JLCPCB Platine
+translate([9,0,0])    Platinenpfosten(); //JLCPCB Platine
 
 difference(){
     union(){
@@ -120,7 +120,7 @@ difference(){
         //translate([53,6.3,0]) rotate([90,0,0])cylinder(r=12,h=6.3); //Poti Ummant
          //translate([53,6.3,0]) rotate([90,0,0])cylinder(r=5,h=7.3); //Poti Ummant
         translate([-28,6.3,0]) rotate([90,0,0])cylinder(r=12,h=9.3); //Drehgeber Ummant
-               translate([-28,6.3,0]) rotate([90,0,0])cylinder(r=5,h=10.3); //Drehgeber Ummant
+               translate([-28,6.3,0]) rotate([90,0,0])cylinder(r=5,h=11.3); //Drehgeber Ummant
  /*     
       translate([0,0,-0.5]){  //Lochbild Display
           difference(){
@@ -144,7 +144,7 @@ translate([8,3.3,-1.6]) rotate([-90,180,0]) OLED();
 translate([-28,10+1.2,0]) rotate([90,0,0])cylinder(r=11,h=13); //Drehgeber
     
 //translate([53,10-2,0]) rotate([90,0,0])cylinder(r=3.5,h=10); //Poti
-translate([-28,10-2,0]) rotate([90,0,0])cylinder(r=3.5,h=13); //Drehgeber    
+translate([-28,10-2,0]) rotate([90,0,0])cylinder(r=3.5,h=14); //Drehgeber    
     
 //translate([0,4,0]) cube([71.4,10,24.4],center=true);    //Display
     
